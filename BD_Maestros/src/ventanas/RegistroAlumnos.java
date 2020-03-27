@@ -41,6 +41,7 @@ public class RegistroAlumnos extends javax.swing.JFrame {
         txt_buscar = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         label_status = new javax.swing.JLabel();
+        txt_dirrecion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,24 +88,28 @@ public class RegistroAlumnos extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1)
-                        .addComponent(txt_nombre)
-                        .addComponent(jLabel2)
-                        .addComponent(txt_grupo)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton1)
-                            .addGap(18, 18, 18)
-                            .addComponent(jButton2)
-                            .addGap(18, 18, 18)
-                            .addComponent(jButton3))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txt_buscar)))
-                    .addComponent(jButton4)
-                    .addComponent(label_status))
-                .addContainerGap(133, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel1)
+                                .addComponent(txt_nombre)
+                                .addComponent(jLabel2)
+                                .addComponent(txt_grupo)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButton1)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton2)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton3))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txt_buscar)))
+                            .addComponent(jButton4)
+                            .addComponent(label_status))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(txt_dirrecion))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,6 +123,8 @@ public class RegistroAlumnos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txt_grupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(txt_dirrecion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
@@ -128,7 +135,7 @@ public class RegistroAlumnos extends javax.swing.JFrame {
                     .addComponent(txt_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGap(71, 71, 71)
                 .addComponent(label_status)
                 .addContainerGap())
         );
@@ -145,6 +152,7 @@ public class RegistroAlumnos extends javax.swing.JFrame {
             pst.setString(1, "0");
             pst.setString(2, txt_nombre.getText().trim());
             pst.setString(3, txt_grupo.getText().trim());
+             pst.setString(4, txt_dirrecion.getText().trim());
             pst.executeUpdate();
             
             txt_nombre.setText("");
@@ -262,6 +270,7 @@ public class RegistroAlumnos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel label_status;
     private javax.swing.JTextField txt_buscar;
+    private javax.swing.JTextField txt_dirrecion;
     private javax.swing.JTextField txt_grupo;
     private javax.swing.JTextField txt_nombre;
     // End of variables declaration//GEN-END:variables
